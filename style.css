@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(252, 252, 3, 0.5);
+  padding: 20px 0px;
+}
+
+.users-div,.users-score{
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  border: 1px solid rgb(189, 93, 9);
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: .5rem;
+}
+
+.user-one,.user-two{
+  height: 40px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(189, 93, 9);
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: .25rem;
+}
+
+.score-one,.score-two{
+  font-size: 18px;
+  color: brown;
+  font-weight: bold;
+}
+
+.user-one.yourTurn{
+  background: rgb(247, 255, 27);
+  color: rgb(0, 0, 0);
+}
+
+.user-two.yourTurn{
+  background: rgb(247, 255, 27);
+  color: rgb(0, 0, 0);
+}
+
+.game-container{
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgb(189, 93, 9);
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.pictures-container{
+  width: calc(25% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  position:relative;
+  border: 1px solid lightpink;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.pictures-container:active{
+  transform: scale(0.96);
+}
+
+.pictures-container.flip{
+  transform: rotateY(180deg);
+}
+
+.front-face,.back-face{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position:absolute;
+  background: rgb(247, 255, 27);
+  backface-visibility: hidden;
+}
+
+.front-face{
+  transform: rotateY(180deg);
+}
+
+.reset-div{
+  margin-top: 10px;
+}
+
+.restart-Btn{
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgb(142, 234, 14);
+  background: transparent;
+  border-radius: 50%;
+  font-weight: bold;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.restart-Btn:hover{
+  background: rgba(142, 234, 14, 0.5);
+  border-color: black;
+}
+
